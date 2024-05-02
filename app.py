@@ -114,8 +114,14 @@ with st.container():
     st.subheader('📊計算債務')
     if st.button('顯示債務關係'):
         balances = calculate_balances(st.session_state.transactions)
-        st.write('債務關係：')
-        st.write(balances)
+        # Converting balances to DataFrame for better visualization
+        if balances:
+            balances_df = pd.DataFrame(list(balances.items()), columns=['成員', '餘額'])
+            # Apply color styling based on balance values
+            st.dataframe(balances_df.style.applymap(lambda x: 'color: red;' if x < 0 else 'color: green;'))
+        else:
+            st.write('目前沒有足夠的交易數據來計算債務。')
+
 
 
 with st.container():
