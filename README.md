@@ -34,4 +34,4 @@ This Travel-Split-Money System is a Streamlit web application designed to facili
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+Licensed under the [CC BY-NC-ND 4.0 DEED](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en), please attribute the source when reposting the content.
